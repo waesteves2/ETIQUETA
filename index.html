@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="shortcut icon"
+  href="https://media.glassdoor.com/sql/2482830/rodonaves-transportes-e-encomendas-rte-squarelogo-1551764906097.png">
+
+
+
+<style>
+  html {
+
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+
+
+  .nome {
+
+    width: 200px;
+
+    margin: 5px;
+
+  }
+
+  .end {
+
+    width: 250px;
+
+    display: inline-flex;
+    margin: 5px;
+
+  }
+
+  #cpf {
+
+    width: 120px;
+  }
+
+  #Bairro {
+
+    width: 120px;
+  }
+
+  .cid {
+
+    width: 100px;
+    margin: 5px;
+  }
+
+  #volumes {
+
+    width: 30px;
+    margin: 5px;
+  }
+
+  .tel {
+
+    width: 100px;
+    margin: 5px;
+  }
+
+  img {
+
+    margin-left: 220px;
+    width: 220px;
+    margin-left: auto;
+
+  }
+
+  hr {
+
+    color: rgb(6, 6, 8);
+    border: solid 1px;
+  }
+
+  .content {
+
+    border: 2px solid black;
+    width: 450px;
+    height: 300px;
+    margin: auto;
+    padding: 7px;
+  }
+
+  .etiqueta {
+
+    width: 450px;
+    height: 310px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    margin-left: -2%;
+    
+  }
+
+ 
+  
+</style>
+<style>
+
+</style>
+
+
+<head>
+  <title>ETIQUETA RTE</title>
+
+</head>
+
+<body>
+
+  <div class="content">
+
+    <img src="https://uploads-ssl.webflow.com/623201a0da52900bfc863055/63485366c15643d2f025dea6_logo-rodonaves.png"
+      alt="logo-rodonaves">
+
+      <div>
+        <h1>DECLARAÇÃO</h1>
+      
+        <b>Remetente:</b><input type="text" id="campoDestino" class="remetente" onkeyup="this.value = this.value.toUpperCase();">
+        <hr>
+        <br>
+        <b>Destinatário:</b><input type="text" class="destinatario" onkeyup="this.value = this.value.toUpperCase();">
+        <br>
+        <b>Endereço:</b><input type="text" class="end" onkeyup="this.value = this.value.toUpperCase();">
+        <br>
+        <b>Cidade:</b><input type="text" class="cid" onkeyup="this.value = this.value.toUpperCase();">
+        <label for="cidade"></label>
+        <br>
+        <b>Volumes:</b><input type="number" id="volumes" min="1">
+        <br>
+        <br>
+        <br>
+      </div>
+      <div id="etiquetas"></div>
+      
+    <br>
+    <button onclick="gerarEtiquetas()">Gerar Etiquetas</button>
+  </div>
+
+  <div class="elementos">
+
+    <script>
+      // Cria uma função para preencher a etiqueta
+      function gerarEtiquetas() {
+        // Lê o valor do campo de volumes
+        var volumes = document.getElementById('volumes').value;
+
+
+        // Limpa o conteúdo anterior das etiquetas
+        document.getElementById("etiquetas").innerHTML = "";
+
+        // Laço para criar etiquetas baseadas na quantidade de volumes
+        for (var i = 1; i <= volumes; i++) {
+          // Cria um elemento div para cada etiqueta
+          var etiqueta = document.createElement("div");
+          etiqueta.classList.add("etiqueta");
+
+          // Preenche as informações da etiqueta
+          etiqueta.innerHTML =
+
+            etiqueta.innerHTML =
+            "<img src='https://uploads-ssl.webflow.com/623201a0da52900bfc863055/63485366c15643d2f025dea6_logo-rodonaves.png' width='100' height='50'>" +
+            "<h1>DECLARAÇÃO</h1>" +
+            "<p><b>Remetente:</b> <span id='label-remetente'>" + document.querySelector('.remetente').value + "</span></p>" +
+            "<hr>" +
+            "<p><b>Destinatário:</b><span id='label-destinatario'>" + document.querySelector('.destinatario').value + "</span></p>" +
+            "<p><b>Endereço: </b><span id='label-endereco'>" + document.querySelector('.end').value + "</span></p>" +
+            "<p><b>Cidade:</b><span id='label-cidade'>" + document.querySelector('.cid').value + "</span></p>" +
+            "<p><b>Volumes:</b> <span id='label-volume'>" + i + "/" + volumes + "</span></p>";
+
+          // Adiciona a etiqueta à página
+          document.getElementById("etiquetas").appendChild(etiqueta);
+        }
+        // Adiciona o botão de impressão para cada etiqueta
+        var btnPrint = document.createElement("button");
+        btnPrint.innerHTML = "Imprimir Etiquetas";
+        btnPrint.onclick = function () {
+          window.print();
+        };
+        document.getElementById("etiquetas").appendChild(btnPrint);
+      }
+
+
+      // Cria uma string vazia para armazenar os volumes
+      var volumeString = "";
+
+      // Laço para adicionar cada volume à string
+      for (var i = 1; i <= volumes; i++) {
+        volumeString += i + "/" + volumes + " ";
+      }
+
+      // Preenche o campo de volume na etiqueta
+      document.getElementById("label-volume").innerHTML = volumeString;
+
+
+    </script>
+  </div>
+
+  <script>
+    // Referência ao campo de origem
+    var origem = document.getElementById("campoOrigem");
+    
+    // Referência ao campo de destino
+    var destino = document.getElementById("campoDestino");
+    
+    // Evento de "oninput" para o campo de origem
+    origem.oninput = function() {
+      // Atribui o valor do campo de origem ao campo de destino
+      destino.value = origem.value;
+
+      
+    }
+
+        // Recupera os dados do Local Storage
+    document.getElementById('label-remetente').innerHTML = localStorage.getItem('remetente');
+    document.getElementById('label-destinatario').innerHTML = localStorage.getItem('destinatario');
+    document.getElementById('label-endereco').innerHTML = localStorage.getItem('endereco');
+    document.getElementById('label-cidade').innerHTML = localStorage.getItem('cidade');
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
+.etiqueta {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.etiqueta h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.etiqueta p {
+    margin-bottom: 10px;
+}
+
+.etiqueta .info {
+    font-weight: bold;
+    color: #555;
+}
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="number"] {
+    padding: 10px; /* Adiciona espaço interno */
+    border: 1px solid #ccc; /* Adiciona uma borda cinza */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    width: 100%; /* Define a largura para ocupar todo o espaço disponível */
+    box-sizing: border-box; /* Inclui o preenchimento e a borda na largura total */
+    margin-bottom: 10px; /* Adiciona espaço na parte inferior */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px; /* Adiciona espaço interno */
+    background-color: #007bff; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Estilo para o botão quando o mouse passa sobre ele */
+button:hover {
+    background-color: #0056b3; /* Altera a cor de fundo */
+}
+.etiqueta-wrapper {
+    border: 1px solid #0a0a0a; /* Adiciona uma borda cinza */
+    padding: 10px; /* Adiciona espaço interno */
+    margin-bottom: 20px; /* Adiciona espaço na parte inferior */
+}
+@font-face {
+    font-family: 'SuaFonteEtiqueta';
+    src: url('caminho/para/sua/fonte.woff2') format('woff2'),
+         url('caminho/para/sua/fonte.woff') format('woff');
+    /* Adicione outros formatos de fonte, se necessário */
+}
+
+.etiqueta h2,
+.etiqueta p {
+    font-family: 'SuaFonteEtiqueta', sans-serif; /* Use sua fonte de etiqueta com fallback para fontes sans-serif genéricas */
+    /* Adicione outros estilos de fonte, se necessário */
+}

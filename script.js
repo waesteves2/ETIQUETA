@@ -56,7 +56,7 @@ function visualizeLabel(option) {
                     <img src="logo.png" alt="Logo da Empresa" style="position: absolute; bottom: 10px; right: 10px; width: 95%; height: auto;">
                     <h1 style="font-weight: bold; margin-bottom: 2vh; font-size: 3vw; text-align: center;">${option}</h1>
                     <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Data Limite: <span>${formattedDataLimite}</span></p>
-                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Número ${option === "EXTRAVIO" ? "CT-E" : "NF"}: <span>${numCte}</span></p>
+                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Número ${option === "EXTRAVIO" ? "CT-E/NF-e" : "NF"}: <span>${numCte}</span></p>
                     <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Volume: <span>${i}/${numVolumes}</span></p>
                     <p style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">* Tratativa via email.</p>
                 </div>

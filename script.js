@@ -45,8 +45,8 @@ function visualizeLabel(option) {
     var newWindow = window.open("");
     
     // Calculando o tamanho das etiquetas
-    var etiquetaWidth = 10; // 10 cm na horizontal
-    var etiquetaHeight = 7; // 7 cm na vertical
+    var etiquetaWidth = 13; // 10 cm na horizontal
+    var etiquetaHeight = 10; // 7 cm na vertical
     var espacoVertical = 1; // 1 cm de espaçamento vertical entre etiquetas
 
     for (var i = 1; i <= numVolumes; i++) {
@@ -54,11 +54,11 @@ function visualizeLabel(option) {
             <div class="etiqueta-wrapper" style="width: ${etiquetaWidth}cm; height: ${etiquetaHeight}cm; margin-bottom: ${espacoVertical}cm;">
                 <div class="etiqueta" style="border: 3px solid #0a0a0a; padding: 10px; height: 100%; position: relative;">
                     <img src="logo.png" alt="Logo da Empresa" style="position: absolute; bottom: 10px; right: 10px; width: 95%; height: auto;">
-                    <h1 style="font-weight: bold; margin-bottom: 2vh; font-size: 3vw; text-align: center;">${option}</h1>
-                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Data Limite: <span>${formattedDataLimite}</span></p>
-                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Número ${option === "EXTRAVIO" ? "CT-E/NF-e" : "NF"}: <span>${numCte}</span></p>
-                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">Volume: <span>${i}/${numVolumes}</span></p>
-                    <p style="font-weight: bold; font-size: 1.8vw; font-size: 1.9vw;">* Tratativa via email.</p>
+                    <h1 style="font-weight: bold; margin-bottom: 2vh; font-size: 5vw; text-align: center;">${option}</h1>
+                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 6vw;">Data Limite: <span>${formattedDataLimite}</span></p>
+                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 6vw;">Número ${option === "EXTRAVIO" ? "CT-E/NF-e" : "NF"}: <span>${numCte}</span></p>
+                    <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 6vw;">Volume: <span>${i}/${numVolumes}</span></p>
+                    <p style="font-weight: bold; font-size: 1.8vw; font-size: 6vw;">* Tratativa via email.</p>
                 </div>
             </div>
         `;

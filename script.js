@@ -53,7 +53,7 @@ function visualizeLabel(option) {
         var labelText = `
             <div class="etiqueta-wrapper" style="width: ${etiquetaWidth}cm; height: ${etiquetaHeight}cm; margin-bottom: ${espacoVertical}cm;">
                 <div class="etiqueta" style="border: 3px solid #0a0a0a; padding: 10px; height: 100%; position: relative;">
-                    <img src="logo.png" alt="Logo da Empresa" style="position: absolute; bottom: 10px; right: 10px; width: 95%; height: auto;">
+                    <img src="logo.png" alt="Logo da Empresa" style="position: absolute; bottom: 10px; right: 10px; width: 99%; height: auto;">
                     <h1 style="font-weight: bold; margin-bottom: 2vh; font-size: 5vw; text-align: center;">${option}</h1>
                     <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 6vw;">Data Limite: <span>${formattedDataLimite}</span></p>
                     <p class="info" style="font-weight: bold; font-size: 1.8vw; font-size: 6vw;">Número ${option === "EXTRAVIO" ? "CT-E/NF-e" : "NF"}: <span>${numCte}</span></p>

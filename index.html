@@ -124,15 +124,15 @@
 
       // Montar o conteúdo da etiqueta com bordas
       var etiquetaContent = "";
-      for (var i = 1; i <= qtdVolumes; i++) {
+     for (var i = 1; i <= qtdVolumes; i++) {
         etiquetaContent += "<div style='border: 1px solid black; padding: 10px;'>";
         etiquetaContent += "<img src='logo.png'style='border-bottom: 1px solid black; width:98%; style='/>";
         etiquetaContent += "<h2 style='text-align: center;'>" + tipoEtiqueta + "</h2>";
-        etiquetaContent += "<p><strong style='border-bottom: 0px solid black; padding-bottom: 5px; font-weight: bold;'>Nome:</strong> " + nome + "</p>";
-        etiquetaContent += "<p><strong style='border-bottom: 0px solid black; padding-bottom: 5px; font-weight: bold;'>Data de Entrada:</strong> " + dataFormatada + "</p>";
-        etiquetaContent += "<p><strong style='border-bottom: 0px solid black; padding-bottom: 5px; font-weight: bold;'>Número de CT-e:</strong> " + numeroCte + "</p>";
-        etiquetaContent += "<p><strong style='border-bottom: 0px solid black; padding-bottom: 5px; font-weight: bold;'>Volume:</strong> " + i + "/" + qtdVolumes + "</p>";
-        etiquetaContent += "<p><strong style='border-bottom: 0px solid black; padding-bottom: 5px; font-weight: bold;'>Tratativa por Email:</strong> " + tratativaEmail + "</p>";
+        etiquetaContent += "<h3><strong style='border-bottom: 0px solid black; padding-bottom: 5px;'>Nome:</strong> " + nome + "</h3>";
+        etiquetaContent += "<h3><strong style='border-bottom: 0px solid black; padding-bottom: 5px;'>Data de Entrada:</strong> " + dataFormatada + "</h3>";
+        etiquetaContent += "<h3><strong style='border-bottom: 0px solid black; padding-bottom: 5px;'>Número de CT-e:</strong> " + numeroCte + "</h3>";
+        etiquetaContent += "<h3><strong style='border-bottom: 0px solid black; padding-bottom: 5px;'>Volume:</strong> " + i + "/" + qtdVolumes + "</h3>";
+        etiquetaContent += "<h3><strong style='border-bottom: 0px solid black; padding-bottom: 5px;'>Tratativa por Email:</strong> " + tratativaEmail + "</h3>";
         etiquetaContent += "</div>";
       }
       // Simular a impressão abrindo uma nova janela com o conteúdo da etiqueta
